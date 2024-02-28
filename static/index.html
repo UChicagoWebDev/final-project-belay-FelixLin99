@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belay</title>
+    <!-- Custom Favicon -->
+    <link rel="icon" type="image/png" href="/path/to/your/favicon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Mukta:wght@200&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- React -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Your Custom CSS for Fancy Animations -->
+    <style>
+        body {
+            animation: fadein 2s;
+        }
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <header id="header" class="header">
+        <!-- Logo and Navigation Container -->
+        <div class="header-content">
+
+            <!-- Site Title or Brand Name -->
+            <div class="site-title">
+                <span class="material-icons md-24">groups</span>
+                <h1>
+                    <a href="/" style="text-decoration: none; color: inherit;">Belay</a>
+                </h1>
+            </div>
+
+        </div>
+    </header>
+
+
+        <div id="root"></div>
+
+        <!-- Footer to credit the developer -->
+        <footer class="footer">
+            Developed by <strong>shuhuilin</strong> © 2024
+        </footer>
+
+        <script type="text/babel" src="/static/app.js"></script>
+    </div>
+
+    <script>
+        console.log('Welcome to Belay! This platform is developed by Shuhui.');
+    </script>
+</body>
+
+</html>

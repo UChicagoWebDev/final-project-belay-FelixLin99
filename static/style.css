@@ -1,0 +1,328 @@
+* {
+    font-family: 'Roboto', sans-serif; /* Changed the font family for a fresh look */
+}
+
+body {
+  background-color: #f0f4f8; /* Lightened the background for a softer look */
+}
+
+.container {
+  height: 100%;
+}
+
+input {
+    background-color: #ffffff; /* Ensured clarity with hex code */
+    border: 2px solid #cccccc; /* Added a light border for definition */
+    padding: 10px; /* Increased padding for better usability */
+    border-radius: 5px; /* Added rounded corners for a modern look */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff; /* Changed to a different shade for freshness */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+    height: 15%;
+    padding: 20px 0; /* Added vertical padding for better spacing */
+  }
+
+.header h2 {
+    font-size: 2rem; /* Adjusted for a more responsive size */
+    font-family: 'Roboto', sans-serif;
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+.header h2 a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+.form-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto); /* Simplified for readability */
+    height: auto;
+    grid-auto-rows: minmax(min-content, max-content);
+    color: #333333; /* Changed text color for contrast */
+    font-family: 'Roboto', sans-serif;
+    justify-items: center;
+    gap: 15px; /* Added gap for spacing between grid items */
+  }
+
+/* Adjusted to ensure grid column span is effective */
+.form-page h3, .form-page h4, .form-page .username, .form-page .password, .form-page .newchannel {
+    grid-column: 1 / -1;
+}
+
+.login-buttons, .newchannel-button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; /* Added gap for spacing between buttons */
+    padding: 20px;
+    justify-content: center; /* Centered buttons horizontally */
+    align-items: center; /* Centered buttons vertically */
+}
+
+.login-buttons button, .newchannel-button {
+    background-color: #007bff; /* Unified button color for consistency */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    border: none; /* Removed border for a cleaner look */
+    padding: 10px 15px; /* Adjusted padding for better ergonomics */
+    font-weight: bold;
+    border-radius: 5px; /* Added rounded corners for a modern look */
+    cursor: pointer; /* Added cursor to indicate clickable items */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.login-buttons button:hover, .newchannel-button:hover {
+    background-color: #0056b3; /* Darkened on hover for interactivity */
+}
+
+.channel-view {
+    display: inline-grid;
+    height: 85%;
+    width: 100vw;
+    grid-template-columns: auto minmax(0, 1fr);
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+.message-view {
+    background-color: #f8f9fa; /* Lightened background for a clean look */
+    grid-area: 1 / 2 / 3 / 3;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+
+.posted-messages {
+    padding-left: 8px;
+    grid-area: 1 / 1 / 2 / 2;
+    margin-top: 8px;
+  }
+
+.posted-messages div {
+    padding-bottom: 8px;
+    padding-right: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.posted-messages p {
+    background-color: #ffffff; /* Ensured clarity with hex code */
+    color: #007bff; /* Updated text color for readability */
+    padding-left: 8px;
+    margin: 0;
+    padding: 8px; /* Unified padding for consistency */
+    border-radius: 5px; /* Added rounded corners for modernity */
+}
+
+.posted-messages #author {
+    background-color: #ffffff;
+    color: #ff9900; /* Enhanced orange color for visibility */
+    padding-left: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.posted-messages msg {
+    background-color: #ffffff;
+    color: #007bff;
+    padding-left: 8px;
+    font-size: 18px;
+}
+
+.posted-messages #reply_count {
+    background-color: #ffffff;
+    color: #007bff;
+    padding-left: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: underline; /* Added underline to indicate interactivity */
+}
+
+.posted-messages #message-for-replies {
+    background-color: #ffffff;
+    color: #007bff;
+    font-size: 25px;
+}
+
+.posted-messages #message-for-replies #author {
+    background-color: #ffffff;
+    color: #ff9900;
+    padding-left: 8px;
+    font-size: 30px;
+}
+
+.post-message {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.post-message form {
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.post-message form textarea {
+    grid-area: 1 / 1 / 2 / 2;
+    border: 2px solid #cccccc; /* Defined border for clarity */
+    padding: 10px; /* Added padding for text area comfort */
+    border-radius: 5px; /* Rounded corners for a modern look */
+}
+
+.post-message form button {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: #007bff; /* Updated button color for consistency */
+    color: white;
+    width: max-content;
+    cursor: pointer;
+    padding: 15px 18px; /* Unified padding for simplicity */
+    margin-bottom: 0;
+    font-size: medium;
+    font-weight: bold; /* Adjusted for clarity */
+    border: none; /* Clean look */
+    border-radius: 5px; /* Consistency in design */
+    transition: background-color 0.3s ease; /* Added transition for interactivity */
+}
+
+.post-message form button:hover {
+    background-color: #0056b3; /* Darkened on hover */
+}
+
+.channel-menu {
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: #007bff; /* Updated for aesthetic consistency */
+    padding-right: 15px;
+    height: 100%;
+    width: auto;
+    z-index: 1;
+    left: 0;
+    overflow-x: hidden;
+    color: white;
+}
+
+.channel-menu h2 {
+    padding-left: 16px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-weight: bold;
+}
+
+.channel-menu a, .channel-menu .all-buttons button {
+    padding: 0px 8px 0px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    background: transparent; /* Ensured transparency for consistency */
+    border: none; /* Removed border for a clean look */
+    cursor: pointer;
+}
+
+.channel-menu .all-buttons #selected {
+    color: #ff9900; /* Highlighted selected item for visibility */
+    font-weight: bold; /* Enhanced visibility */
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    transform: scale(2.5); /* Adjust scale as needed for icon size */
+    padding-left: 5px;
+    padding-bottom: 8px;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    display: inline-block; /* Ensures proper alignment */
+    vertical-align: middle; /* Centers icons vertically */
+}
+
+.material-icons.md-24 {
+    font-size: 24px; /* Default size for medium icons */
+    color: bisque; /* Specific color for an aesthetic touch */
+}
+
+.material-icons.md-12 {
+    padding-right: 5px;
+    padding-top: 5px;
+    font-size: 12px; /* Corrected to match the naming convention */
+    color: #0a4b52; /* Specific color for consistency */
+    cursor: pointer;
+    transform: scale(1); /* Reset scale for smaller icons */
+}
+
+img {
+    width: 100px;
+    height: auto;
+    padding-left: 8px;
+    border-radius: 5px; /* Rounded corners for images */
+    object-fit: cover; /* Ensures images cover the area nicely */
+}
+
+.action-button {
+    display: block;
+    width: auto;
+    margin: 10px auto;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    color: white; /* Text color */
+    background-color: #007bff; /* Background color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Mouse pointer */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.action-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+#buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.reply-box {
+    border: 1px solid #ccc;
+    padding: 3px;
+    margin-bottom: 3px;
+    border-radius: 5px; /* Rounded corners for reply boxes */
+    background-color: #f9f9f9; /* Light background for contrast */
+    width: calc(100% - 6px); /* Adjust width to include padding and border */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.all-buttons a:hover {
+    color: #00ffee; /* Changes the text color to red on hover */
+}
+
+.site-title {
+    text-align: center; /* Centers the text and icon horizontally */
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Aligns items horizontally in the center */
+    justify-content: center; /* Centers the flex container's children */
+}
+
+.site-title.md-24 {
+    font-size: 48px; /* Adjusts icon size */
+    color: #0a4b52; /* Example color, adjust as needed */
+    margin-bottom: 20px; /* Space between icon and text */
+}
